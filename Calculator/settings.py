@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-5b#a=r-eb=lvo4d#m4=hc$+ob-a54la%og!9rcemb6q+86zq62
 DEBUG = False
 
 ALLOWED_HOSTS = ["ekaterinakarip.onrender.com"]
-CSRF_FAILURE_VIEW = ["ekaterinakarip.onrender.com"]
 
 
 # Application definition
