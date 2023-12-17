@@ -5,17 +5,17 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def index(response):
+def index(request):
     
 
-    if response.method =='POST':
+    if request.method =='POST':
         try:
-            dictionary = response.POST
+            dictionary = request.POST
             Sentexpression = dictionary['SentCalculation']
             answer= eval(Sentexpression)
         except:
             answer = "Please Give Valid Input"
-        return render(response, 'index.html', {"answer":answer,"Sentexpression":Sentexpression})
+        return render(request, 'index.html', {"answer":answer,"Sentexpression":Sentexpression})
     else:
-        return render(response, 'index.html',{})
+        return render(request, 'index.html',{})
 
